@@ -56,7 +56,7 @@ const Navbar: React.FC = () => {
       icon: <PersonOutlineOutlined className="text-icon" />,
       text: (
         <Box className="!text-content-14 text-brand-1 font-bold">
-          {t("sign-up")}
+          {t("sign_up")}
         </Box>
       ),
       onClick: () => handleSignin(),

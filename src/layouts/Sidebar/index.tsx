@@ -38,12 +38,12 @@ const ListSidebar = () => {
     },
     {
       icon: <RoomOutlined className="text-icon" />,
-      text: t("trip-note"),
+      text: t("trip_note"),
       href: "/",
     },
     {
       icon: <BookOutlined className="text-icon" />,
-      text: t("wiki-bds-full"),
+      text: t("wiki_bds_full"),
       href: "/",
     },
     {

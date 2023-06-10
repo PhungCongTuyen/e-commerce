@@ -14,10 +14,10 @@ export const NavItem = ({ href, text }: { href: string; text?: string }) => {
 const AboutUs = () => {
   const { t } = useTranslation("footer");
   const listNav = [
-    { text: t("introduce-cyber"), href: "/" },
-    { text: t("complaint-handling-policy"), href: "/" },
-    { text: t("payment-privacy-policy"), href: "/" },
-    { text: t("privacy-policy"), href: "/" },
+    { text: t("introduce_cyber"), href: "/" },
+    { text: t("complaint_handling_policy"), href: "/" },
+    { text: t("payment_privacy_policy"), href: "/" },
+    { text: t("privacy_policy"), href: "/" },
     { text: t("recruitment"), href: "/" },
     { text: t("contact"), href: "/" },
   ];
@@ -25,7 +25,7 @@ const AboutUs = () => {
   return (
     <Box>
       <Box className="text-content-16 text-black-1 font-semibold">
-        {t("about-us")}
+        {t("about_us")}
       </Box>
       <Box className="mt-4">
         {listNav.map((item, index) => (

@@ -32,7 +32,7 @@ const Payment = () => {
         ))}
       </Box>
       <Box className="text-content-16 text-black-1 font-semibold mt-[26px]">
-        {t("contact-us")}
+        {t("contact_us")}
       </Box>
       <Box className="flex flex-wrap mt-3 gap-1">
         {listSocial.map((item, index) => (

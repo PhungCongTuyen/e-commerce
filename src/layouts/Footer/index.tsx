@@ -27,12 +27,12 @@ const Footer = () => {
         sx={{ borderStyle: "dashed", borderColor: "white", borderWidth: "1px" }}
       />
       <Box className="text-center text-black-1">
-        <Box className="font-bold text-content-32">{t("company-name")}</Box>
+        <Box className="font-bold text-content-32">{t("company_name")}</Box>
         <Box className="text-content-16 mt-4">{t("address")}</Box>
         <Box className="text-content-16 mt-4">
           {t("copyright")}
           <Box component={"span"} className="font-bold">
-            {t("copyright-stack")}
+            {t("copyright_stack")}
           </Box>
         </Box>
       </Box>

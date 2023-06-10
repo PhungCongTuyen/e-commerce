@@ -32,12 +32,12 @@ const TopWidget = () => {
     },
     {
       icon: <WidgetsOutlined className="!text-content-12" />,
-      text: t("wiki-bds"),
+      text: t("wiki_bds"),
       href: "/",
     },
     {
       icon: <CardGiftcardOutlined className="!text-content-12" />,
-      text: t("send-request"),
+      text: t("send_request"),
       href: "/",
     },
   ];
