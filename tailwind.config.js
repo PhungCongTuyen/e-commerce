@@ -11,6 +11,7 @@ module.exports = {
         "grey-1": "#848589",
         "access-green": "#188262",
         "access-red": "#FF3D3A",
+        "background-1": "#F0F2F5",
         stroke: "#DADADA",
         icon: "#ADB3BC",
       },

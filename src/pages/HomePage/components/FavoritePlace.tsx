@@ -5,14 +5,16 @@ import TitleWithRoute, {
   TitleWithRouteType,
 } from "../../../components/TitleWithRoute";
 import { useTranslation } from "react-i18next";
+import { useHistory } from "react-router-dom";
 
 const FavoritePlace = () => {
   const { t } = useTranslation("home");
+  const history = useHistory();
   return (
     <Box>
       <TitleWithRoute
         buttonText={t("watch_all")}
-        href="/"
+        href="/xe-cho-thue"
         title={
           <>
             <Box className="text-brand-1">{t("place_voted_by_customer")}</Box>
@@ -24,7 +26,10 @@ const FavoritePlace = () => {
         type={TitleWithRouteType.TRANSPARENT_BACKGROUND}
       />
       <Box className="flex flex-wrap gap-5">
-        <CardItem isPropose />
+        <CardItem
+          isPropose
+          onClick={() => history.push({ pathname: "/xe-cho-thue/321" })}
+        />
         <CardItem isPropose />
         <CardItem isPropose />
         <CardItem isPropose />

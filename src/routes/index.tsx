@@ -4,17 +4,31 @@ import {
   Switch,
   Route,
   Redirect,
+  useLocation,
 } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import { ACTION_TYPE, ProfileDispatchContext } from "../context";
 import HomePage from "../pages/HomePage";
+import CategoryPage from "../pages/CategoryPage";
+import NotFoundPage from "../pages/NotFoundPage";
+import DetailPage from "../pages/DetailPage";
 
 type Routers = {
-  path: string;
+  path: string | string[];
   element: ReactElement;
   exact?: boolean;
   isAuth?: boolean;
 };
+
+export function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 const Routes = () => {
   const { token } = useAuth();
@@ -25,6 +39,20 @@ const Routes = () => {
       path: "/",
       element: <HomePage />,
       exact: true,
+    },
+    {
+      path: ["/xe-cho-thue", "/bds"],
+      element: <CategoryPage />,
+      exact: true,
+    },
+    {
+      path: ["/xe-cho-thue/:id", "/bds/:id"],
+      element: <DetailPage />,
+      exact: true,
+    },
+    {
+      path: "*",
+      element: <NotFoundPage />,
     },
   ];
 
@@ -55,7 +83,12 @@ const Routes = () => {
     dispatchContext({ type: ACTION_TYPE.INIT, payload: profile });
   }, [dispatchContext, token]);
 
-  return <Router>{mappingRoute(router)}</Router>;
+  return (
+    <Router>
+      <ScrollToTop />
+      {mappingRoute(router)}
+    </Router>
+  );
 };
 
 export default Routes;

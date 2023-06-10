@@ -11,6 +11,8 @@
     "short_time_place_title": "Nơi lưu trú ngắn ngày phù hợp với bạn nhất",
     "short_time_place_detail": "Có {{counter}} điểm lưu trú được yêu thích - Đang đợi bạn ...",
     "vehicle_for_rent": "Xe cho thuê",
+    "vehicle_for_rent_detail": "Thông tin xe cho thuê",
+    "home": "Trang chủ",
     "flash_sale_in_day": "Flash sales trong ngày",
     "propose": "Đề xuất"
 }

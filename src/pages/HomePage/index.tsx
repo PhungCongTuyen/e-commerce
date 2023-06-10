@@ -14,7 +14,7 @@ const HomePage = () => {
   const { t } = useTranslation("home");
   const isFlashSale = true;
   return (
-    <Box>
+    <Box className="max-w-[1440px] mx-auto px-14">
       <DiscoveryNearby />
       <Box className="flex flex-col gap-20">
         {isFlashSale && <FlashSaleInDay />}

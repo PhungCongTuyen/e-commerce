@@ -1,3 +1,18 @@
 {
-    "discovery_title": "Discovery"
+    "discovery_title": "Khám phá những điểm đến gần bạn",
+    "partner": "Đối tác tiêu biểu",
+    "customer_experience": "Trải nghiệm của khách hàng",
+    "viewed_places": "Địa điểm bạn đã xem",
+    "go_discover_now": "Khám phá ngay",
+    "long_time_place_title": "Địa điểm lưu trú dài hạn có thể bạn quan tâm",
+    "long_time_place_detail": "Có {{counter}} địa điểm lưu trú dài hạn tính theo tháng được đánh giá cao - Đang đợi bạn ...",
+    "watch_all": "Xem tất cả",
+    "place_voted_by_customer": "Địa điểm lưu trú được nhiều người yêu thích có thể bạn quan tâm",
+    "short_time_place_title": "Nơi lưu trú ngắn ngày phù hợp với bạn nhất",
+    "short_time_place_detail": "Có {{counter}} điểm lưu trú được yêu thích - Đang đợi bạn ...",
+    "vehicle_for_rent": "Xe cho thuê",
+    "vehicle_for_rent_detail": "Thông tin xe cho thuê",
+    "home": "Trang chủ",
+    "flash_sale_in_day": "Flash sales trong ngày",
+    "propose": "Đề xuất"
 }
