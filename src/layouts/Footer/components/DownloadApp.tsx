@@ -10,7 +10,7 @@ const DownloadApp = () => {
   return (
     <Box>
       <Box className="text-content-16 text-black-1 font-semibold">
-        {t("download-app")}
+        {t("download_app")}
       </Box>
       <Box className="mt-4 flex gap-2">
         <img src={QRCode} alt="" />

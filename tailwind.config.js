@@ -12,6 +12,7 @@ module.exports = {
         "access-green": "#188262",
         "access-red": "#FF3D3A",
         "background-1": "#F0F2F5",
+        "background-black-1": "rgba(58, 58, 60, 0.75)",
         stroke: "#DADADA",
         icon: "#ADB3BC",
       },
