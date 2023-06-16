@@ -6,6 +6,7 @@ import TitleWithRoute, {
 } from "../../../components/TitleWithRoute";
 import { useTranslation } from "react-i18next";
 import SaleIcon from "../../../assets/images/sale.png";
+import ROUTES from "../../../utils/constants/routesConstant";
 
 const FlashSaleInDay = () => {
   const { t } = useTranslation("home");
@@ -13,7 +14,7 @@ const FlashSaleInDay = () => {
     <Box>
       <TitleWithRoute
         buttonText={t("watch_all")}
-        href="/"
+        href={ROUTES.FLASH_SALE_IN_DAY}
         title={
           <Box className="flex items-center gap-4">
             <Box component={"img"} src={SaleIcon} alt="" />

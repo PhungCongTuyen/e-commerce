@@ -1,33 +1,38 @@
 import { NavigateNextOutlined } from "@mui/icons-material";
-import { Stack, Breadcrumbs, Box } from "@mui/material";
+import { Breadcrumbs, Box } from "@mui/material";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useRouteMatch } from "react-router-dom";
+import ROUTES from "../utils/constants/routesConstant";
 
 const CustomBreadcrumbs = () => {
   const { t } = useTranslation("home");
-  const { url, path } = useRouteMatch();
+  const { path } = useRouteMatch();
 
   const routesName = [
     {
       name: t("home"),
-      path: "/",
+      path: ROUTES.HOME,
     },
     {
       name: t("vehicle_for_rent"),
-      path: "/xe-cho-thue",
+      path: ROUTES.VEHICLE_FOR_RENT,
     },
     {
       name: t("vehicle_for_rent_detail"),
-      path: "/xe-cho-thue/:id",
+      path: ROUTES.VEHICLE_FOR_RENT_DETAIL,
     },
     {
       name: t("bds_for_rent"),
-      path: "/bds",
+      path: ROUTES.BDS_FOR_RENT,
+    },
+    {
+      name: t("bds_for_sell"),
+      path: ROUTES.BDS_FOR_SELL,
     },
     {
       name: t("bds_for_rent_detail"),
-      path: "/bds/:id",
+      path: ROUTES.BDS_FOR_RENT_DETAIL,
     },
   ];
 

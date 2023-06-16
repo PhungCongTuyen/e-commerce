@@ -12,9 +12,10 @@ import FlashSaleInDay from "./components/FlashSaleInDay";
 import HouseTypes from "./components/HouseTypes";
 import BDSNews from "./components/BDSNews";
 import Filter from "../../components/Filter";
+import { GetApiMethodInstance } from "../../services";
 
 const HomePage = () => {
-  const { t } = useTranslation("home");
+  React.useEffect(() => {}, []);
   const isFlashSale = true;
   return (
     <Box>

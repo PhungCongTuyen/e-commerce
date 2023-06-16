@@ -5,6 +5,7 @@ import TitleWithRoute, {
   TitleWithRouteType,
 } from "../../../components/TitleWithRoute";
 import { useTranslation } from "react-i18next";
+import ROUTES from "../../../utils/constants/routesConstant";
 
 const LongTimePlace = () => {
   const { t } = useTranslation("home");
@@ -12,7 +13,7 @@ const LongTimePlace = () => {
     <Box>
       <TitleWithRoute
         buttonText={t("watch_all")}
-        href="/"
+        href={ROUTES.BDS_FOR_SELL}
         title={
           <>
             <Box>{t("long_time_place_title")}</Box>

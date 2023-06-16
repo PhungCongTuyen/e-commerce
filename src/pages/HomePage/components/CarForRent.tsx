@@ -3,6 +3,7 @@ import CardItem from "../../../components/CardItem";
 import { Box, Button } from "@mui/material";
 import TitleWithRoute from "../../../components/TitleWithRoute";
 import { useTranslation } from "react-i18next";
+import ROUTES from "../../../utils/constants/routesConstant";
 
 enum VehicleType {
   MOTOBIKE = "MOTOBIKE",
@@ -45,7 +46,7 @@ const CarForRent = () => {
     <Box>
       <TitleWithRoute
         buttonText={t("watch_all")}
-        href="/"
+        href={ROUTES.VEHICLE_FOR_RENT}
         title={
           <Box className="flex items-center gap-4">
             <Box className="text-white text-content-title font-bold bg-brand-1 px-6 py-2 rounded-tr-xl rounded-br-xl">

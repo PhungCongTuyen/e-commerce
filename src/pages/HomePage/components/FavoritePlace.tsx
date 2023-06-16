@@ -6,6 +6,7 @@ import TitleWithRoute, {
 } from "../../../components/TitleWithRoute";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
+import ROUTES from "../../../utils/constants/routesConstant";
 
 const FavoritePlace = () => {
   const { t } = useTranslation("home");
@@ -14,7 +15,7 @@ const FavoritePlace = () => {
     <Box>
       <TitleWithRoute
         buttonText={t("watch_all")}
-        href="/xe-cho-thue"
+        href={ROUTES.FAVORITE_PLACE}
         title={
           <>
             <Box className="text-brand-1">{t("place_voted_by_customer")}</Box>

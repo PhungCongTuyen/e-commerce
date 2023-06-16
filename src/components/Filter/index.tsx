@@ -11,6 +11,8 @@ import {
 import { useTranslation } from "react-i18next";
 import FilterForRent from "./FilterForRent";
 import FilterForVehicle from "./FilterForVehicle";
+import { useRouteMatch } from "react-router-dom";
+import ROUTES from "../../utils/constants/routesConstant";
 
 const theme = createTheme({
   components: {
@@ -73,6 +75,7 @@ function a11yProps(index: number) {
 const Filter = () => {
   const { t } = useTranslation("home");
   const [tab, setTabs] = React.useState<TabsType>(TabsType.RENT);
+  const { path } = useRouteMatch();
 
   const listTabsContent = [
     <FilterForRent />,
@@ -81,32 +84,47 @@ const Filter = () => {
     <FilterForVehicle />,
   ];
 
-  const listTabs = [
-    {
-      label: t("for_rent"),
-      value: TabsType.RENT,
-      icon: <HomeOutlined />,
-    },
-    {
-      label: t("for_sale"),
-      value: TabsType.FOR_SALE,
-      icon: <AttachMoneyOutlined />,
-    },
-    {
-      label: t("project"),
-      value: TabsType.PROJECT,
-      icon: <VillaOutlined />,
-    },
-    {
-      label: t("vehicle_for_rent_drive_yourself"),
-      value: TabsType.VEHICLE,
-      icon: <DirectionsCarOutlined />,
-    },
-  ];
+  const listTabs = React.useMemo(
+    () => [
+      {
+        label: t("for_rent"),
+        value: TabsType.RENT,
+        icon: <HomeOutlined />,
+        disabled:
+          !path.includes(ROUTES.BDS_FOR_RENT) ||
+          !path.includes(ROUTES.BDS_FOR_SELL),
+      },
+      {
+        label: t("for_sale"),
+        value: TabsType.FOR_SALE,
+        icon: <AttachMoneyOutlined />,
+        disabled: path.includes(ROUTES.VEHICLE_FOR_RENT),
+      },
+      {
+        label: t("project"),
+        value: TabsType.PROJECT,
+        icon: <VillaOutlined />,
+        disabled: path.includes(ROUTES.VEHICLE_FOR_RENT),
+      },
+      {
+        label: t("vehicle_for_rent_drive_yourself"),
+        value: TabsType.VEHICLE,
+        icon: <DirectionsCarOutlined />,
+        disabled: !path.includes(ROUTES.VEHICLE_FOR_RENT),
+      },
+    ],
+    [path, t]
+  );
 
   const handleChange = (e: React.SyntheticEvent, value: number) => {
     setTabs(value);
   };
+
+  React.useEffect(() => {
+    if (path.includes(ROUTES.VEHICLE_FOR_RENT)) {
+      setTabs(TabsType.VEHICLE);
+    } else setTabs(TabsType.RENT);
+  }, [path]);
 
   return (
     <ThemeProvider theme={theme}>
@@ -137,6 +155,7 @@ const Filter = () => {
                 key={index}
                 icon={item.icon}
                 iconPosition="start"
+                disabled={item.disabled}
               />
             ))}
           </Tabs>

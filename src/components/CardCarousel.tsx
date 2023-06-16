@@ -45,6 +45,8 @@ const CardCarousel: React.FC<Props> = ({
             <Box className="flex gap-1 justify-between">
               <Box
                 className="text-content-title text-ellipsis font-bold overflow-hidden w-full"
+                component={"div"}
+                title={title}
                 sx={{
                   WebkitLineClamp: 1,
                   WebkitBoxOrient: "vertical",
@@ -59,6 +61,8 @@ const CardCarousel: React.FC<Props> = ({
               </Box>
             </Box>
             <Box
+              component={"div"}
+              title={description}
               className="text-content-16 w-full"
               sx={{
                 overflow: "hidden",
@@ -94,6 +98,8 @@ const CardCarousel: React.FC<Props> = ({
                 WebkitBoxOrient: "vertical",
                 display: "-webkit-box",
               }}
+              component={"div"}
+              title={description || title}
             >
               {description || title}
             </Box>
