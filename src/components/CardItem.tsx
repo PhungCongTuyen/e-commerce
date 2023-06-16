@@ -40,7 +40,7 @@ const CardItem: React.FC<Props> = ({
   const { t } = useTranslation("home");
   return (
     <CustomCard
-      className="w-[248px] h-[437px] !rounded-xl !p-3 cursor-pointer !block !text-left relative"
+      className="min-w-[248px] w-[248px] h-[437px] !rounded-xl !p-3 cursor-pointer !block !text-left relative !bg-white"
       sx={{ boxShadow: "0px 0px 12px rgba(15, 61, 145, 0.12)" }}
       onClick={(event) => {
         event.stopPropagation();

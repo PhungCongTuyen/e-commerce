@@ -77,6 +77,9 @@ const TopWidget = () => {
           <MenuItem className="!text-content-12" value={LangPropsEnum.ENG}>
             English
           </MenuItem>
+          <MenuItem className="!text-content-12" value={LangPropsEnum.CN}>
+            Chinese
+          </MenuItem>
         </Select>
       </Box>
     </Box>

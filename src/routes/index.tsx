@@ -12,6 +12,7 @@ import HomePage from "../pages/HomePage";
 import CategoryPage from "../pages/CategoryPage";
 import NotFoundPage from "../pages/NotFoundPage";
 import DetailPage from "../pages/DetailPage";
+import ROUTES from "../utils/constants/routesConstant";
 
 type Routers = {
   path: string | string[];
@@ -36,17 +37,21 @@ const Routes = () => {
 
   const router: Routers[] = [
     {
-      path: "/",
+      path: ROUTES.HOME,
       element: <HomePage />,
       exact: true,
     },
     {
-      path: ["/xe-cho-thue", "/bds"],
+      path: [ROUTES.BDS_FOR_RENT, ROUTES.BDS_FOR_SELL, ROUTES.VEHICLE_FOR_RENT],
       element: <CategoryPage />,
       exact: true,
     },
     {
-      path: ["/xe-cho-thue/:id", "/bds/:id"],
+      path: [
+        ROUTES.BDS_FOR_RENT_DETAIL,
+        ROUTES.BDS_FOR_SELL_DETAIL,
+        ROUTES.VEHICLE_FOR_RENT_DETAIL,
+      ],
       element: <DetailPage />,
       exact: true,
     },

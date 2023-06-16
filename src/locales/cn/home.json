@@ -1,5 +1,5 @@
 {
-    "discovery_title": "Khám phá những điểm đến gần bạn",
+    "discovery_title": "發現您附近的目的地",
     "partner": "Đối tác tiêu biểu",
     "customer_experience": "Trải nghiệm của khách hàng",
     "viewed_places": "Địa điểm bạn đã xem",
@@ -33,7 +33,5 @@
     "time_stay_placeholder": "Chọn nhu cầu",
     "special_search": "Tìm kiếm nâng cao",
     "rent_a_car": "Thuê xe Ô tô",
-    "rent_a_motobike": "Thuê xe máy",
-    "bds_for_rent": "BDS cho thuê",
-    "bds_for_sell": "BDS cần bán"
+    "rent_a_motobike": "Thuê xe máy"
 }
